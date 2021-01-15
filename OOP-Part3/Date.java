@@ -1,6 +1,4 @@
 /* Prompt user input month, day, year. Then, using method to return values the user input*/
-
-ackage myOOP;
 import java.util.Scanner; 
 
 public class Date 
