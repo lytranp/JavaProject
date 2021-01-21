@@ -37,10 +37,12 @@ public class Date2
         return month;
     }
 
+    /*
     public static void main(String[] args) 
     {
         Date2 object = new Date2();
         object.setDate(1, 2, 1987);
         System.out.println(object.getMonth());
     }
+    */
 }
