@@ -1,3 +1,5 @@
+/* This is an example of mutator and accessor methods*/
+
 import java.time.Year;
 import java.util.Scanner;
 
@@ -79,8 +81,33 @@ public class Date3
                 System.exit(0);
                 return ("Error");
         }
-
     }
+
+    /* Note: Mutator methods can return a Boolean value
+
+    public Boolean setMonth(int monthNumber)
+    {
+        if ((monthNumber <=0) || (monthNumber > 12))
+            return false;
+        else  
+        {
+            month = monthString(monthNumber);
+            return True;
+        }
+    }
+
+    // Use the Boolean mutator method in this case:
+
+    Date3 d = new Date3();
+    ...
+    System.out.println("Enter month");
+    int m = keyboard.nextInt();
+    while (!d.setMonth(m))
+    {
+        System.out.println("Error. Please enter again");
+        m = keyboard.nextInt();
+    }   
+    */
 
     public void setMonth(int monthNumber)
     {
@@ -117,22 +144,31 @@ public class Date3
 
     public boolean equals(Date3 otherDate)
     {
-        return ( (otherDate.day == day) 
+        return ( (otherDate.day == day) // NOTE: because otherDate is the same type as the class Date3 being define, it can access private instance variables
         && (otherDate.month.equalsIgnoreCase(month)) 
         && (otherDate.year == year));
     }
 
-    public String getMonth()
+    public int getMonth()
     {
-        return month;
+        if (month.equalsIgnoreCase("january"))
+            return 1;
+        else if (month.equalsIgnoreCase("february"))
+            return 2;
+        else 
+        {
+            System.out.println("Error");
+            System.exit(0);
+            return 0;
+        }
     }
 
     public boolean precedes(Date3 otherDate)
     {
         return ((year < otherDate.year)
-            || (year == otherDate.year && month < otherDate.month())
+            || (year == otherDate.year && getMonth() < otherDate.getmonth()) // NOTE: use method otherDate.getMonth() rather than otherDate.month only because we wanted the month as integer instead of string
             || (year == otherDate.year && month.equalsIgnoreCase(otherDate.month) && day < otherDate.day));
     }
 
-    
+
 }
