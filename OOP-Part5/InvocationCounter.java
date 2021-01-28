@@ -29,6 +29,5 @@ public class InvocationCounter
         } 
 
         System.out.println("Total number of invocations = " + numberSoFar());
-        
     }
 }

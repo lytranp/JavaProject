@@ -12,3 +12,5 @@ public class FormatPrintfMethod
         System.out.printf("%2.3f ",number);
     }
 }
+
+
