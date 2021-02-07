@@ -4,7 +4,7 @@ public class While {
     public static void main(String[] args) 
     {
         Scanner object = new Scanner(System.in);
-        System.out.println("Enter a list of nonnegative scores, a negative number marks the end: ");
+        System.out.print("Enter a list of nonnegative scores, a negative number marks the end: ");
 
         double next, sum = 0;
         int count = 0;

@@ -6,7 +6,7 @@ public class Switch
     {
 
         Scanner object = new Scanner(System.in);
-        System.out.println("Enter number of ice cream flavors: ");
+        System.out.print("Enter number of ice cream flavors: ");
         int numberOfFlavors = object.nextInt( );
 
         switch (numberOfFlavors) // Controlling expression
